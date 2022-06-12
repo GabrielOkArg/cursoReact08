@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { LoginScreen } from '../components/auth/LoginScreen';
 import { RegisterScreen } from '../components/auth/RegisterScreen';
+
+
+
+
+
+
 export const AuthRouter = () => {
+
+const {status} = useSelector(state=>state.auth)
+
+useEffect(() => {
+    onauth
+}, []);
+
+
     return (
         <div className='auth__main'>
             <div className='auth__box-container'>
